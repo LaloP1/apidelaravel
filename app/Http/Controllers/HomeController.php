@@ -27,10 +27,10 @@ class HomeController extends Controller
     public function index()
     {
         //Http::get() se utiliza para realizar una solicitud GET a la URL especificada. 
-        $usuarios = HTTP::get('https://jsonplaceholder.typicode.com/users');
+        //$usuarios = HTTP::get('https://jsonplaceholder.typicode.com/users');
         //. Luego, se utiliza el método json() para obtener los datos de la respuesta en formato JSON y almacenarlos en la variable $usuariosArray. En resumen, esta línea de código convierte los datos JSON obtenidos de la solicitud en un arreglo PHP para que puedas trabajar con ellos en tu aplicación.
-        $usuariosArray = $usuarios->json();
+        //$usuariosArray = $usuarios->json();
                             //se utiliza para crear un arreglo asociativo donde la clave es el nombre de la variable y el valor es el contenido de la variable. En este caso, $usuariosArray es una variable que contiene un arreglo de datos que previamente obtuviste de una solicitud HTTP, como se mencionó en tu código anterior.
-        return view('home', compact('usuariosArray'));
+        //return view('home', compact('usuariosArray'));
     }
 }

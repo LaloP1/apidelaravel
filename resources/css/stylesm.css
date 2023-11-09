@@ -1,0 +1,59 @@
+.contenedorp{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+.contenedorp .contenedor__comic{
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   width: 350px;
+   height: 360px;
+   background: #ff0000; 
+   border: solid 2px #000000;
+   border-radius: 20px;
+   transition: 0.5s;
+}
+ .contenedorp .contenedor__comic:hover{
+    height: 600px;
+ }
+ .contenedorp .contenedor__comic .img{
+    position: absolute;
+    width: 200px;
+    height: 220px;
+    border-radius: 12px;
+    transition: 0.5s;
+    overflow: hidden;
+ }
+ .contenedorp .contenedor__comic:hover .img{
+    top: -100px;
+    scale: 0.75;
+ }
+ /* .contenedorp .contenedor__comic:hover .img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ } */
+ .contenedorp .contenedor__comic .contenedor_contenido{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+ }
+ .contenedorp .contenedor__comic:hover .contenedor_contenido{
+    top: 190px;
+    height: 350px;
+ }
