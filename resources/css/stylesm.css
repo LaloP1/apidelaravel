@@ -57,3 +57,28 @@
     top: 190px;
     height: 350px;
  }
+ .paginacion{
+   background: #ff0000;
+ }
+ .paginacion_lista{
+   display: flex;
+   justify-content: space-between;
+   padding: 15px 15px;
+ }
+ .paginacion_lista li{
+   list-style-type: none;
+ }
+ .paginacion_lista li a{
+   color: #000000;
+   text-decoration: none;
+   font-size: 20px;
+ }
+ .paginacion_lista li a:hover{
+   color: #ffffff;
+ }
+ /* .footer{
+   background: #ff0000;
+ }
+ .footer ul li{
+   text-align: center;
+ } */

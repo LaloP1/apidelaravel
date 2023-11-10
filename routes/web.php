@@ -11,7 +11,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [NuevoController::class, 'obtenerComics']);
+Route::get('/home', [NuevoController::class, 'obtenerComics'])->name('apiMarvel.marvel');
 
 
 // Route::get('/home', function (){

@@ -14,10 +14,10 @@ class NuevoController extends Controller
         $timestamp = time();
         // Calcula el hash necesario para la autenticación utilizando md5 con el timestamp y las claves.
         $hash = md5($timestamp . $privateKey . $publicKey);
-        $limit = 7; // Cantidad de cómics por página
+        $limit = 5; // Cantidad de cómics por página
     
         // Obtiene el número de página actual de la solicitud
-        $page = request()->input('page', 5);
+        $page = request()->input('page', 1);
     
         // Crea una instancia del cliente HTTP Guzzle.
         $client = new Client();
@@ -28,7 +28,7 @@ class NuevoController extends Controller
                 'ts' => $timestamp,
                 'apikey' => $publicKey,
                 'hash' => $hash,
-                'offset' => ($page - 1) * $limit, // Calcula el desplazamiento para la página actual
+                'offset' => ($page-1)* $limit, // Calcula el desplazamiento para la página actual
             ],
         ]);
         
@@ -45,6 +45,6 @@ class NuevoController extends Controller
         }
     
         $comics = collect($comics);
-        return view('apiMarvel.marvel', ['comics' => $comics, 'page' => $page]);    
+        return view('apiMarvel.marvel', ['comics' => $comics, 'page' => $page]);   
     }
 }

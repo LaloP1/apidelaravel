@@ -78,5 +78,10 @@
             @yield('content')
         </main>
     </div>
+    <!-- <footer class="footer">
+        <ul>
+            <li>Todos los derechos</li>
+        </ul>
+    </footer> -->
 </body>
 </html>
