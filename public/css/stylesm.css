@@ -14,13 +14,13 @@
    align-items: flex-start;
    width: 350px;
    height: 360px;
-   background: #ff0000; 
+   background: #ff0000;
    border: solid 2px #000000;
    border-radius: 20px;
    transition: 0.5s;
 }
  .contenedorp .contenedor__comic:hover{
-    height: 600px;
+    height: 900px;
  }
  .contenedorp .contenedor__comic .img{
     position: absolute;
@@ -55,7 +55,7 @@
  }
  .contenedorp .contenedor__comic:hover .contenedor_contenido{
     top: 190px;
-    height: 350px;
+    height: 490px;
  }
  .paginacion{
    background: #ff0000;
@@ -82,3 +82,16 @@
  .footer ul li{
    text-align: center;
  } */
+ .boton__marvel{
+    border: solid 1px #ffffff;
+    background: #000000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.boton__marvel:hover{
+    border: solid 1px #000000;
+    background: #c43030;
+    color: #000000;
+}
