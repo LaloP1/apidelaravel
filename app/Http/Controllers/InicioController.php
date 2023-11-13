@@ -14,9 +14,12 @@ class InicioController extends Controller
     public function index()
     {
 
+        //Se crea una variable llamada $comicId para almacenar el valor del parámetro 'comic_id'. Este valor se obtiene utilizando el método input() de la clase request(), que es una forma de acceder a los datos enviados en la solicitud HTTP
         $comicId = request()->input('comic_id');
 
         if ($comicId) {
+
+            //Se crea una variable llamada $comicId para almacenar el valor del parámetro 'comic_id'. Este valor se obtiene utilizando el método input() de la clase request(), que es una forma de acceder a los datos enviados en la solicitud HTTP
             return $this->show($comicId);
         }
 
@@ -48,7 +51,7 @@ class InicioController extends Controller
 
         // Extrae la lista de cómics de los resultados de la respuesta.
         $comics = $data->data->results;
-        //  dd($data);
+          dd($data);
 
         // Modifica cada cómic para agregar la URL completa de la imagen.
         foreach ($comics as $marvel) {
@@ -75,9 +78,7 @@ class InicioController extends Controller
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+    //La función show toma un parámetro $id que se espera sea el identificador único del cómic que se desea mostrar.
     public function show(string $id)
     {
             $publicKey = 'd4acbd838efa99f58cbd4de86f52be02';
@@ -87,6 +88,7 @@ class InicioController extends Controller
 
             $client = new Client();
 
+            // Realiza una solicitud GET a la API de Marvel para obtener detalles del cómic con el ID proporcionado
             $response = $client->get("https://gateway.marvel.com/v1/public/comics/{$id}", [
                 'query' => [
                     'ts' => $timestamp,
@@ -95,9 +97,12 @@ class InicioController extends Controller
                 ],
             ]);
 
+            // Decodifica la respuesta JSON obtenida de la API de Marvel
             $data = json_decode($response->getBody());
+            // Obtiene el primer cómic de los resultados
             $comic = $data->data->results[0];
 
+            // Devuelve una vista (posiblemente una plantilla HTML) con los detalles del cómic
             return view('apiMarvel.detailscomics', ['comic' => $comic]);
 
     }

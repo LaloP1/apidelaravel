@@ -12,6 +12,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Esta línea de código simplifica la definición de rutas CRUD para un controlador llamado InicioController bajo la ruta base /home en una aplicación Laravel.
 Route::resource('/home', InicioController::class);
 
 //Route::get('/home', [NuevoController::class, 'obtenerComics'])->name('apiMarvel.marvel');
