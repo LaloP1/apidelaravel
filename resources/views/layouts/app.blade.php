@@ -16,9 +16,11 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    <link rel="stylesheet" href="{{ asset('css/stylesm.css') }}">
+    @vite('resources/css/app.css')
+
+    {{-- <link rel="stylesheet" href="{{ asset('css/stylesm.css') }}"> --}}
 </head>
-<body>
+<body class="bg-blue-500">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

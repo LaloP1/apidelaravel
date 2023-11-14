@@ -22,8 +22,18 @@
                                 <div class="contenedor__comic">
                                         <img src="{{ $marvel->thumbnail->path }}/portrait_uncanny.{{ $marvel->thumbnail->extension }}" alt="{{ $marvel->title }}" class="img">
                                         <div class="contenedor_contenido">
-                                        <h2 class="titulo">{{ $marvel->title }}</h2>
-                                        <p class="descripcion">{{ $marvel->description }}</p>
+                                        <h2 class="">{{ $marvel->title }}</h2>
+                                        @foreach ($marvel->creators->items as $creator)
+                                        <!-- Muestra el nombre del creador -->
+                                        <h3 hidden>Nombre del creador: {{ $creator->name }}</h3>
+                                        @endforeach
+                                        <p class="descripcion">
+                                             @if ($marvel->description)
+                                                {{ $marvel->description }}
+                                            @else
+                                                 Descripción no disponible
+                                            @endif
+                                        </p>
                                         <!-- Agrega un enlace al botón "Ver Detalles" -->
                                         <a href="{{ route('home.show', ['home' => $marvel->id]) }}" class="boton__marvel">Ver Detalles</a>
                                      </div>
