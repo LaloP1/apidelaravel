@@ -43,6 +43,7 @@ class InicioController extends Controller
                 'apikey' => $publicKey,
                 'hash' => $hash,
                 'offset' => ($page-1)* $limit, // Calcula el desplazamiento para la página actual
+                'limit' => $limit,
             ],
         ]);
 
@@ -51,7 +52,7 @@ class InicioController extends Controller
 
         // Extrae la lista de cómics de los resultados de la respuesta.
         $comics = $data->data->results;
-          dd($data);
+        //   dd($data);
 
         // Modifica cada cómic para agregar la URL completa de la imagen.
         foreach ($comics as $marvel) {

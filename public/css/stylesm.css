@@ -50,7 +50,6 @@
     text-align: center;
     height: 60px;
     overflow: hidden;
-    text-align: center;
     transition: 0.5s;
  }
  .contenedorp .contenedor__comic:hover .contenedor_contenido{
