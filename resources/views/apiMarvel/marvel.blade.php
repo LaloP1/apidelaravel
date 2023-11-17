@@ -15,7 +15,7 @@
                                             <!-- Muestra el nombre del creador -->
                                             <h3 hidden>Nombre del creador: {{ $creator->name }}</h3>
                                             @endforeach
-                                            <p class="mb-4">
+                                            <p class="text-slate-100 mb-3" class="mb-4">
                                                 @if ($marvel->description)
                                                     {{ $marvel->description }}
                                                 @else
@@ -23,7 +23,7 @@
                                                 @endif
                                             </p>
                                             <!-- Agrega un enlace al botón "Ver Detalles" -->
-                                            <a href="{{ route('home.show', ['home' => $marvel->id]) }}" class="border-2 border-slate-100 bg-zinc-950 text-slate-100 pt-3 pb-3 pl-5 pr-5 rounded-2xl mt-5 hover:bg-slate-100 hover:text-gray-950 hover:border-gray-950">Ver Detalles</a>
+                                            <a href="{{ route('home.show', ['home' => $marvel->id]) }}" class="border-2 border-slate-100 bg-gray-600 text-slate-100 pt-3 pb-3 pl-5 pr-5 rounded-2xl mt-5 hover:bg-slate-100 hover:text-red-700 hover:border-red-700">Ver Detalles</a>
                                         </div>
                                 </div>
                     </div>
@@ -41,6 +41,35 @@
                             </li>
                     </ul>
                 </div>
+
+                <footer class="w-full bg-gray-600">
+                    <div class="w-full max-w-7xl m-auto grid grid-cols-3 gap-12 pb-12 pt-12">
+                        <div>
+                            <figure class="w-full h-full flex justify-center items-center">
+                                <a href="#">
+                                    <img src="https://i.pinimg.com/originals/8e/e9/c1/8ee9c1e8083ebe9babe7208c1f46daca.png" alt="Logo de Marvel" class="w-64">
+                                </a>
+                            </figure>
+                        </div>
+                        <div>
+                            <h2 class=" text-gray-50 mb-6 text-sm">SOBRE NOSOTROS</h2>
+                            <p class="text-gray-50 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                            <p class="text-gray-50 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                        </div>
+                        <div>
+                            <h2 class=" text-gray-50 mb-6 text-sm">SIGUENOS</h2>
+                            <div class="red-social">
+                                <a href="#" class="fa fa-facebook inline-block w-11 h-11 leading-10 text-slate-100 mr-3 text-center hover:text-red-700"></a>
+                                <a href="#" class="fa fa-instagram inline-block w-11 h-11 leading-10 text-slate-100 mr-3 text-center hover:text-red-700"></a>
+                                <a href="#" class="fa fa-twitter inline-block w-11 h-11 leading-10 text-slate-100 mr-3 text-center hover:text-red-700"></a>
+                                <a href="#" class="fa fa-youtube inline-block w-11 h-11 leading-10 text-slate-100 mr-3 text-center hover:text-red-700"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" bg-gray-50 pt-4 pb-4 pl-2 pr-2 text-center text-red-700">
+                        <small>&copy; 2023 <b>MARVEL</b> - Todos los Derechos Reservados.</small>
+                    </div>
+                </footer>
         @endsection
 
 
