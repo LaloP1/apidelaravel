@@ -8,7 +8,7 @@
                 @foreach ($comics as $marvel)
                     <div class="relative flex justify-center items-center flex-wrap pt-16 pb-16 pl-14 pr-14">
                                 <div class="relative group flex justify-center items-start w-96 h-96 duration-700 hover:h-600 bg-red-500 border-2 border-white rounded-2xl shadow-lg shadow-slate-100 ">
-                                        <img src="{{ $marvel->thumbnail->path }}/portrait_uncanny.{{ $marvel->thumbnail->extension }}" alt="{{ $marvel->title }}" class="absolute w-48 h-56 rounded-lg  overflow-hidden transform group-hover:-translate-y-24 duration-700">
+                                    <img src="{{ $marvel->thumbnail->path }}/portrait_uncanny.{{ $marvel->thumbnail->extension }}" alt="{{ $marvel->title }}" class="absolute w-48 h-56 rounded-lg  overflow-hidden transform group-hover:-translate-y-24 duration-700">
                                         <div class="absolute mt-64 w-full pl-7 pr-7 text-center h-16 overflow-hidden duration-700 group-hover:top-2 group-hover:h-96">
                                             <h2 class="text-white text-xl mb-1">{{ $marvel->title }}</h2>
                                             @foreach ($marvel->creators->items as $creator)

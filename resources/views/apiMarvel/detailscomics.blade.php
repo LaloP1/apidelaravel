@@ -8,9 +8,9 @@
                             <h2 class="text-white text-xl mb-1">{{ $comic->title }}</h2>
                             @foreach ($comic->creators->items as $creator)
                             <!-- Muestra el nombre del creador -->
-                            <h3 hidden>Nombre del creador: {{ $creator->name }}</h3>
+                            <h3 class="text-slate-100">Nombre del creador: {{ $creator->name }}</h3>
                             @endforeach
-                            <p class="mb-4">
+                            <p class="mb-4 mt-2 text-slate-100">
                                 @if ($comic->description)
                                     {{ $comic->description }}
                                 @else
